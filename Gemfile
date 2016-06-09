@@ -24,3 +24,5 @@ source 'https://rubygems.org'
  gem 'turbolinks'
 
  gem 'devise'
+
+ gem 'bootstrap-sass'
