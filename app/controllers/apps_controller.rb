@@ -1,11 +1,14 @@
 class AppsController < ApplicationController
 
+  before_action :require_sign_in, except: [:index, :show]
+
   def index
     @app = App.all
   end
 
   def show
     @app = App.find(params[:id])
+    @events = @app.events.group_by(&:name)
   end
 
   def new
@@ -16,7 +19,7 @@ class AppsController < ApplicationController
     @app = App.new(app_params)
       if @app.save
         flash[:notice] = "Application was created succesfully"
-        redirect_to app_path
+        redirect_to apps_path
       else
         flah[:alert] = "Failed to create application plese try again"
         redirect_to new_app_path

@@ -1,5 +1,19 @@
 <h1><%=@app.name%></h1>
 <p><%=@app.URL%></p>
-  <div class="col-md-4">
-    <%= link_to "Delete Application", @app, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this application' } %>
-  </div>
+  <h2><%= pluralize(@app.events.count, 'event')%></h2>
+  <% @app.events.each do |event| %>
+    <div class="media">
+      <div class="media-body">
+        <h4 class="media-heading">
+          <%= link_to event.name, app_event_path(@app, event) %>
+        </h4>
+          <small>
+            submitted <%= time_ago_in_words(event.created_at) %> ago <br>
+          </small>
+            <% end %>
+         </div>
+        </div>
+       <%= link_to "Delete Application", @app, method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this application' } %>
+      <div class="col-md-4">
+        <%= link_to "New Event", new_app_event_path(@app), class: 'btn btn-success' %>
+     </div>
