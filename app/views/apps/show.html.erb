@@ -17,3 +17,4 @@
       <div class="col-md-4">
         <%= link_to "New Event", new_app_event_path(@app), class: 'btn btn-success' %>
      </div>
+  <%= pie_chart @app.events.group(:name).count %>
