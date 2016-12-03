@@ -4,14 +4,30 @@
 .title-home {
 
   h1 {
-    font-size: 34px;
-    font-weight: 200;
-    color: rgba(1,1,1,.5);
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+    position: absolute;
+    margin-left: 300px;
+    margin-top: -480px;
+    border: 2px solid;
+    border-radius: 25px;
+    padding: 10px;
+    text-shadow: 1px 1px 5px rgba(1,1,1,.5);
   }
 }
 
-.logo {
-  img {
-    
+.home-info {
+  position: absolute;
+  margin-top: -350px;
+  margin-left: 200px;
+
+  h1 {
+    font-size:40px;
+    color: white;
+  }
+
+  p {
+    color: white,
   }
 }

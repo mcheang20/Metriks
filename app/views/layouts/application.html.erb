@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
   <div class="container">
   <ul class="nav nav-tabs">
-   <li role="presentation" class="active"><%= link_to "Home", welcome_home_path %></li>
+   <li role="presentation"><%= link_to "Home", welcome_home_path %></li>
    <li role="presentation"><%= link_to "Applications", apps_path %></li>
   <% if user_signed_in? %>
     | Signed in as: <strong><%= current_user.email %></strong> |
