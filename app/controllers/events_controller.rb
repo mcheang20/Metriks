@@ -10,7 +10,6 @@ class EventsController < ApplicationController
   end
 
   def create
-
     @app = App.find(params[:app_id])
     @event = @app.events.build(event_params)
 
