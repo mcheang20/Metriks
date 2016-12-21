@@ -1,6 +1,6 @@
 ## Metriks: API Tracking Service and Reporting Tool
 
-![Alt](/chart.png)
+![Alt](/project/blocmetrics/app/assets/images/chart.png)
 
 ### Javascript Snippet
 
