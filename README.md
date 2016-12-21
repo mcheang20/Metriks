@@ -1,12 +1,17 @@
-{:.center}
-![]({{ site.baseurl }}/images/chart.png)
+---
+layout: post
+title: Metriks: API Tracking Service and Reporting Tool
 
-Blocmetrics: API Tracking Service and Reporting Tool
+---
+
+{:.center}
+![]({{ site.baseurl }}/assets/images/chart.png)
 
 ### Javascript Snippet
 
 Include the Javascript code below in your application's `application.js` file.
 
+{% highlight js %}
 var blocmetrics = {};
   blocmetrics.report = function(eventName){
     var event = {event: { name: eventName }};
@@ -15,3 +20,4 @@ var blocmetrics = {};
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify(event));
   }
+{% endhighlight %}
