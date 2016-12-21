@@ -1,5 +1,5 @@
 {:.center}
-![]({{ site.baseurl }}/chart.png)
+![]({{ site.baseurl }}/images/chart.png)
 
 Blocmetrics: API Tracking Service and Reporting Tool
 
