@@ -1,6 +1,8 @@
 ## Metriks: API Tracking Service and Reporting Tool
 
-![](/images/chart.png)
+![](https://github.com/mcheang20/Metriks/blob/master/app/assets/images/chart.png)
+
+Track and record events on your application using the Metriks tool.
 
 ### Javascript Snippet
 
