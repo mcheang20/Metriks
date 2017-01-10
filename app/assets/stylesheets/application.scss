@@ -32,10 +32,6 @@
   font-weight: 200;
 }
 
-.home-page {
-
-}
-
 .user-session {
   float: right;
   padding-top: 12px;
@@ -75,4 +71,18 @@
     a {
       font-size: 16px;
     }
+}
+
+.home-logo {
+  img{
+    height: 36px;
+  }
+}
+
+.navbar-link {
+  a {
+    font-size: 18px;
+    margin-top: 4px;
+    color: teal;
+  }
 }
