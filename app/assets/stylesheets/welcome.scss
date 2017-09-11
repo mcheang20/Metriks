@@ -20,12 +20,13 @@
   position: relative;
   padding: 8% 0 0 10%;
   h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: #33606d;
     margin: 0;
   }
   p {
     color: white;
+    font-size: 1.5rem;
     text-shadow: 1px 1px rgba(1,1,1,.2);
   }
   .btn {
@@ -43,6 +44,7 @@
 
 .reg-tag {
   text-align: center;
+  padding: 5% 5%;
   p {
     font-size: 1rem;
     color: white;

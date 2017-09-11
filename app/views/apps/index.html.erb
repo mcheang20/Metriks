@@ -1,5 +1,9 @@
 <div class="container title">
-  <h1> Rgistered Applications </h1>
+  <h1> Registered Applications </h1>
+</div>
+
+<div class="register-btn">
+  <%= link_to "Register New App", new_app_path, class: 'btn'%>
 </div>
 
 <div class="container apps-index">
@@ -12,8 +16,5 @@
         </div>
       </div>
     <% end %>
-  </div>
-  <div class="register-btn">
-    <%= link_to "Register New App", new_app_path, class: 'btn'%>
   </div>
 </div>

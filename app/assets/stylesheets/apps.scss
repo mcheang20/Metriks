@@ -12,11 +12,10 @@
 }
 
 .event-index {
-  background-color: rgba(1,1,1,.1);
+  background-color: #f1f1f1;
   padding: 10px;
   a {
     font-size: 1rem;
-    color: rgba(1,1,1,.6);
   }
   .btn {
     padding: 5px;
@@ -31,6 +30,7 @@
 
 .app-controls {
   float: right;
+  padding: 10px;
 }
 
 .chart {
@@ -44,6 +44,8 @@
 }
 
 .register-btn {
+  float: right;
+  padding: 10px 125px 0 0;
   a {
     padding: 10px;
     border: 1px solid;
@@ -52,5 +54,16 @@
       background-color: #337ab7;
       color: white;
     }
+  }
+}
+
+@media screen and (max-width: 530px){
+  .register-btn {
+    float: none;
+    padding: 10px 0 0 10px;
+  }
+  .app-controls {
+    float: none;
+    padding: 0 0 10px 0;
   }
 }
