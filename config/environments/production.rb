@@ -76,5 +76,5 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-   config.action_mailer.default_url_options = { host: 'https://peaceful-wave-58477.herokuapp.com/' }
+   config.action_mailer.default_url_options = { host: 'https://metriks-api.herokuapp.com' }
 end
