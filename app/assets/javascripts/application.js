@@ -17,3 +17,18 @@
 //= require_tree .
 //= require Chart.bundle
 //= require chartkick
+
+//mobile nav function
+$(document).ready(function(){
+  if($(window).width() <= 530){
+    $("#mobile-nav").click(function(){
+      $(".navigation").slideToggle();
+    })
+  }
+});
+
+/* var mobileNav = document.getElementById("mobile-nav");
+var navBar = document.getElementsByClassName("navigation")[0];
+mobileNav.addEventListener('click', function(){
+  navBar.style.display = "block";
+}); */

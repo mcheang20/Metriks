@@ -1,55 +1,65 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* home page styles */
+.home-page {
+  background-image: url("https://www.eagleeyetutoring.com/images/slider-mountains.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+  height: 100vh;
+  width: 100%;
+}
+
 .title-home {
   position: absolute;
 }
+
 .home-info {
-  position: absolute;
-  margin-top: -600px;
-  margin-left: 100px;
-  width: 800px;
-
+  position: relative;
+  padding: 8% 0 0 10%;
   h1 {
-    font-size: 60px;
+    font-size: 3rem;
     color: #33606d;
+    margin: 0;
   }
-
   p {
     color: white;
-    text-shadow: 1px 1px rgba(1,1,1,.5);
+    text-shadow: 1px 1px rgba(1,1,1,.2);
   }
-
   .btn {
     background-color:  #ed6504;
     border: 1px solid  #ed6504;
   }
-
   a {
     color: white;
   }
 }
 
+@media screen and (max-width: 1000px) {
+  padding: 8% 5% 0 5%;
+}
+
 .reg-tag {
-  position: absolute;
-  margin-top: -350px;
-  margin-left: 100px;
   text-align: center;
-
-    p {
-      font-size: 18px;
-      color: white;
+  p {
+    font-size: 1rem;
+    color: white;
+  }
+  h2 {
+    color: white;
+  }
+  h3 {
+    border-bottom: 1px solid white;
+    margin: 0 auto;
+    width: 25%;
+  }
+  img {
+    height: 150px;
+    transition: .5s;
+    &:hover {
+      transform: scale(1.1);
     }
-
-    h2 {
-      color: white;
-    }
-
-    h3 {
-      border-bottom: 2px solid white;
-    }
-
-    img {
-      height: 150px;
-    }
+  }
 }

@@ -1,15 +1,17 @@
 <div class="container">
   <h1 class="title-all"><%=@app.name%></h1>
-    <p><%=@app.URL%></p>
-    <h2 class="title-all"><%= pluralize(@app.events.count, 'event')%> tracked</h2>
+  <p><%=@app.URL%></p>
+  <h2 class="title-all"><%= pluralize(@app.events.count, 'event')%> tracked</h2>
     <div class="event-index">
-    <% @app.events.each do |event| %>
+      <% @app.events.each do |event| %>
         <p><%= link_to event.name, app_event_path(@app, event) %> <small> added <%= time_ago_in_words(event.created_at) %> ago </small></p>
-    <% end %>
+      <% end %>
+
       <div class="app-controls">
-         <%= link_to "Delete Application", @app, method: :delete, class: 'btn btn-default', data: { confirm: 'Are you sure you want to delete this application' } %>
-         <%= link_to "New Event", new_app_event_path(@app), class: 'btn btn-default' %>
+       <%= link_to "Delete Application", @app, method: :delete, class: 'btn btn-default', data: { confirm: 'Are you sure you want to delete this application' } %>
+       <%= link_to "New Event", new_app_event_path(@app), class: 'btn btn-default' %>
       </div>
+      
       <div class="chart">
         <h2>Tracked Events</h2>
         <%= pie_chart @app.events.group(:name).count %>

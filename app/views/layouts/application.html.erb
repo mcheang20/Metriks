@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Blocmetrics</title>
+  <title>Metriks</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <a id="mobile-nav">mobile</a>
+  <li role="presentation" class="home-logo"><%= link_to image_tag("/assets/metriks_logo-4099e61f10c317116ecc685c0aee96e05bec086aab4db147e9ebeb528e29904e.jpg"), welcome_home_path %></li>
   <div class="container">
     <ul class="navigation nav nav-tabs">
-       <li role="presentation" class="home-logo"><%= link_to image_tag("/assets/metriks_logo-4099e61f10c317116ecc685c0aee96e05bec086aab4db147e9ebeb528e29904e.jpg"), welcome_home_path %></li>
-       <li role="presentation" class="navbar-link"><%= link_to "Applications", apps_path %></li>
-       <li role="presentation" class="navbar-link"><%= link_to "About" %></li>
-    <% if user_signed_in? %>
-    <div class="user-session">
-        Welocme <strong><%= current_user.email %></strong>
-    </div>
-       <li role="presentation" class="navbar-link"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
-       <li role="presentation" class="navbar-link"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
-   <% else %>
-       <li role="presentation" class="navbar-link pull-right"><%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %></li>
-       <li role="presentation" class="navbar-link pull-right"><%= link_to "Sign In", new_user_session_path, :class => 'navbar-link' %></li>
-   <% end %>
-   </ul>
-</div>
+      <li role="presentation" class="navbar-link"><%= link_to "Applications", apps_path %></li>
+      <li role="presentation" class="navbar-link"><%= link_to "About" %></li>
+      <% if user_signed_in? %>
+        <div class="user-session">
+          Welcome <strong><%= current_user.email %></strong>
+        </div>
+        <li role="presentation" class="navbar-link"><%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %></li>
+        <li role="presentation" class="navbar-link"><%= link_to "Sign Out", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+      <% else %>
+        <li role="presentation" class="navbar-link pull-right"><%= link_to "Sign Up", new_user_registration_path, :class => 'navbar-link'  %></li>
+        <li role="presentation" class="navbar-link pull-right"><%= link_to "Sign In", new_user_session_path, :class => 'navbar-link' %></li>
+      <% end %>
+    </ul>
+ </div>
 </head>
 <body>
 

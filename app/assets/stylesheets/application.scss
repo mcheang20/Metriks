@@ -15,10 +15,19 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ @import url('https://fonts.googleapis.com/css?family=Quicksand');
 
+/* global styles */
+html {
+  font-size: 16px;
+}
 
-.container {
-  width: 1200px;
+body {
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, p, a {
+  font-family: 'Quicksand', sans-serif;
 }
 
 .logo {
@@ -27,7 +36,6 @@
 }
 
 .title-all {
-  border-bottom: 1px solid rgba(1,1,1,.2);
   color: rgba(1,1,1,.6);
   font-weight: 200;
 }
@@ -38,25 +46,25 @@
 }
 
 .navigation {
-  font-size: 15px;
-
-    a {
-      color: rgba(1,1,1,.6);
-    }
+  font-size: 1rem;
+  a {
+    color: rgba(1,1,1,.6);
+  }
 }
 
 .form-all {
   label {
-    font-size: 19px;
+    font-size: 1.1rem;
     font-weight: 200;
   }
   input {
     width: 300px;
+    border: 1px solid #DEDDDD;
+    padding: 3px;
   }
 }
 
 .submit-btn {
-
   input {
     padding: 10px;
     padding-left: 20px;
@@ -67,13 +75,13 @@
 
 .form-session {
   padding-left: 20px;
-
-    a {
-      font-size: 16px;
-    }
+  a {
+    font-size: 1rem;
+  }
 }
 
 .home-logo {
+  float: left;
   img{
     height: 36px;
   }
@@ -81,8 +89,24 @@
 
 .navbar-link {
   a {
-    font-size: 18px;
+    font-size: 1rem;
     margin-top: 4px;
     color: teal;
+  }
+}
+
+/* mobile styles */
+#mobile-nav {
+  display: none;
+}
+
+@media screen and (max-width: 530px) {
+  #mobile-nav {
+    display: block;
+    float: right;
+  }
+  .navigation {
+    display: inline-grid;
+    text-align: center;
   }
 }
